@@ -1,8 +1,13 @@
-function solution(str: string, ending: string): boolean { 
+export function solution(str: string, ending: string): boolean { 
 
-    console.log(str.split("").length - ending.split("").length)
+   let strEnd:string = str.slice(ending.split("").length - 1) 
+
+    if (strEnd == ending){ 
+        return true
+    }
+    
     return false; // TODO: complete
   } 
 
-  solution('abc', 'bc') // returns true
+  solution('abc', 'bdc') // returns true
 
